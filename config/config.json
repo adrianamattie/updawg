@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "zombies23",
-    "database": "exampledb",
+    "database": "slipIntoThe_db;",
     "host": "localhost",
     "dialect": "mysql"
   },

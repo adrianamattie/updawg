@@ -21,3 +21,9 @@ In this example we will use eslint to fix issues with the calculator app from th
 ### Hints
 
 * If you're unsure about what an eslint rule is asking for, type it into Google for examples.
+Git Add
+Git Commit
+Git Push origin [your branch]
+
+git fetch
+git merge origin/dev

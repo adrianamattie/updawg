@@ -21,4 +21,16 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+    // Add sequelize code to create adopter profile
+    app.post("/api/new", function (req, res) {
+      Adopter.create({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        bio:req.body.bio,
+        conditions: req.body.conditions,
+        interested: false
+      });
+    });
+  
 };
