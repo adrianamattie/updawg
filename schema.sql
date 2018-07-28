@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `slipIntoThe_db`;
+CREATE DATABASE `slipIntoThe_db;
