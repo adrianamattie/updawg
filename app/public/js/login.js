@@ -2,7 +2,7 @@
 $(document).ready(() => {
 
     $('.dropdown-trigger').dropdown();
-
+    $('.modal').modal();
 });
 
 // bubble properties
