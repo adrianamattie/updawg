@@ -1,4 +1,25 @@
 // The code in add.js handles what happens when the user clicks the "Add a book" button.
+//handle authentication
+var config = {
+  apiKey: "AIzaSyBdKKNfe0cwgREyNhcvn7rxBG2-SxvRGh4",
+  authDomain: "updawg-e1145.firebaseapp.com",
+  databaseURL: "https://updawg-e1145.firebaseio.com",
+  projectId: "updawg-e1145",
+  storageBucket: "updawg-e1145.appspot.com",
+  messagingSenderId: "23565913569"
+};
+firebase.initializeApp(config);
+
+var uid;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid;
+  } else {
+    // User is signed out.
+  }
+});
+
 
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
@@ -9,7 +30,8 @@ $("#add-btn").on("click", function(event) {
     firstName: $("#firstName").val().trim(),
     lastName: $("#lastName").val().trim(),
     bio: $("#bio").val().trim(),
-    conditions: $("#livingCondition").val(),
+    conditions: $("#livingCondition").val().trim(),
+    uid:uid,
     profile: $("select").val(),
   };
 
@@ -28,3 +50,4 @@ $("#add-btn").on("click", function(event) {
   $("#livingCondition").val("");
 
 });
+

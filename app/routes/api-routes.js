@@ -46,7 +46,11 @@ module.exports = function (app) {
       lastName: req.body.lastName,
       bio:req.body.bio,
       conditions: req.body.conditions,
+<<<<<<< HEAD
+      uid:req.body.uid,
+=======
       profile: req.body.profile,
+>>>>>>> 19547e074989910cd59a73930120c309a0aeb2dc
       interested: false
     });
   });
