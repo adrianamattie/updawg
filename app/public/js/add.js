@@ -31,7 +31,8 @@ $("#add-btn").on("click", function(event) {
     lastName: $("#lastName").val().trim(),
     bio: $("#bio").val().trim(),
     conditions: $("#livingCondition").val().trim(),
-    uid:uid
+    uid:uid,
+    profile: $("select").val(),
   };
 
   // Send an AJAX POST-request with jQuery

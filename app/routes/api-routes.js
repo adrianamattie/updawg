@@ -19,60 +19,24 @@ module.exports = function (app) {
   });
 
   // Add sequelize code to get a specific book and return it as JSON
-  app.get("/api/book/:book", function (req, res) {
-    Adopter.findOne({
+  app.get("/api/adoptee", function (req, res) {
+    Adopter.findAll({
       where: {
-        title: req.params.book
+        profile: "adoptee",
       }
     }).then(function (results) {
       res.json(results)
     })
   });
 
-  // Add sequelize code to get all books of a specific genre and return them as JSON
-  app.get("/api/genre/:genre", function (req, res) {
+  app.get("/api/adopter", function (req, res) {
     Adopter.findAll({
       where: {
-        genre: req.params.genre
+        profile: "adopter",
       }
     }).then(function (results) {
       res.json(results)
-    });
-  });
-
-  // Add sequelize code to get all books from a specific author and return them as JSON
-  app.get("/api/author/:author", function (req, res) {
-    Adopter.findAll({
-      where: {
-        author: req.params.author
-      }
-    }).then(function (results) {
-      res.json(results)
-    });
-  });
-
-  // Add sequelize code to get profiles set to "ADOPTER"
-  app.get("/api/profile/adopter", function (req, res) {
-    Adopter.findAll({
-      where: {
-        //Profile {
-          //where Adoptee is set to true 
-      }
-    }).then(function (results) {
-      res.json(results)
-    });
-  });
-
-  // Add sequelize code to get profiles set to "ADOPTEE"
-  app.get("/api/profile/adoptee", function (req, res) {
-    Adopter.findAll({
-      where: {
-        //Profile {
-          //where Adoptee is set to true 
-      }
-    }).then(function (results) {
-      res.json(results)
-    });
+    })
   });
 
   // Add sequelize code to create adopter profile
@@ -82,7 +46,11 @@ module.exports = function (app) {
       lastName: req.body.lastName,
       bio:req.body.bio,
       conditions: req.body.conditions,
+<<<<<<< HEAD
       uid:req.body.uid,
+=======
+      profile: req.body.profile,
+>>>>>>> 19547e074989910cd59a73930120c309a0aeb2dc
       interested: false
     });
   });

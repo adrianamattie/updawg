@@ -18,16 +18,17 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/view.html"))
   });
 
-  // add code to send the add.html page, where users can enter new books to the db
-  app.get("/adoptee", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/adoptee.html"))
+  // add code to send the add.html page, where users can enter new profiles to the db
+  app.get("/add", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/add.html"))
   });
 
-  // add code to send the all.html page, where all books in the db are displayed
+  // add code to send the all.html page, where all profiles in the db are displayed
   app.get("/all", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/all.html"))
   });
 
+<<<<<<< HEAD
   // add code to send the short.html page, where short books in the db are displayed
   app.get("/short", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/short.html"))
@@ -44,4 +45,6 @@ module.exports = function(app) {
   })
 
 
+=======
+>>>>>>> 19547e074989910cd59a73930120c309a0aeb2dc
 };

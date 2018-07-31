@@ -14,7 +14,7 @@ var sequelize = require('../config/connection');
         },
         uid: {
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: true,
         },
         firstName: {
             type: Sequelize.STRING,
@@ -29,11 +29,14 @@ var sequelize = require('../config/connection');
         conditions: {
             type: Sequelize.TEXT,
         },
+        profile: {
+            type: Sequelize.STRING,
+        },
         interested: {
             type: Sequelize.BOOLEAN,
             allowNull: false,
             defaultValue: false
-        }
+        },
     }, {
         timestamps: false
     });
