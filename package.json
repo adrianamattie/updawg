@@ -18,5 +18,13 @@
     "sequelize": "^4.38.0"
   },
   "devDependencies": {},
-  "description": "In this example we will use eslint to fix issues with the calculator app from the previous activity."
+  "description": "In this example we will use eslint to fix issues with the calculator app from the previous activity.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianamattie/updawg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adrianamattie/updawg/issues"
+  },
+  "homepage": "https://github.com/adrianamattie/updawg#readme"
 }
