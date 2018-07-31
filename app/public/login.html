@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="icon" type="image/png" href="assets/catupdawg.png" sizes="16x16 32x32" />
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <!-- Bootstrap CSS & JS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- materialize -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="login-style.css">
+</head>
+
+<body>
+<!-- The surrounding HTML is left untouched by FirebaseUI.
+     Your app may use that space for branding, controls and other customizations.-->
+<div id="firebaseui-auth-container"></div>
+<div id="loader"></div>
+    <!-- Logo Section -->
+
+
+
+
+    <!-- Sign-up and Dropdown div  -->
+    <div class="left-align" style="padding-top:12px; padding-left:10px;">
+        <a class="pulse hoverable btn red darken-1 dropdown-trigger" data-target='dropdown1'>
+            <i class="material-icons right" style="margin-left:0">dehaze</i>
+        </a>
+        <a class="waves-effect waves-light hoverable btn red darken-1">
+            <i class="material-icons right">pets</i>Sign Up!</a>
+    </div>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="#!">About UpDawg</a>
+        </li>
+        <li>
+            <a href="#!">LOGIN!</a>
+        </li>
+    </ul>
+
+    <div class="container" style="margin-left:100px;">
+        <img src="assets/updawg design 1.png" alt="updawg logo" class="logo">
+    </div>
+
+    <div class="preloader center-align">
+        <div class="spinner-2 spinner4"></div>
+    </div>
+    <div class="content">
+        <div id="" class="bubbles"></div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/login.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+<script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+</body>
+
+</html>

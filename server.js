@@ -6,6 +6,10 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var exphbs = require("express-handlebars");
+require("dotenv").config();
+
+var db = require("./models");
 
 // Sets up the Express App
 // =============================================================
