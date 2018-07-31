@@ -25,12 +25,14 @@
 <body>
 <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-<div class="login-container" style="display:none">
-     <div id="firebaseui-auth-container"></div>
-<div id="loader"></div>
-    <!-- Logo Section -->
-    </div>
 
+    <!-- Logo Section -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader"></div>
+     </div>
+      </div>
 
 
 
@@ -39,7 +41,7 @@
         <a class="pulse hoverable btn red darken-1 dropdown-trigger" data-target='dropdown1'>
             <i class="material-icons right" style="margin-left:0">dehaze</i>
         </a>
-        <a class="waves-effect waves-light hoverable btn red darken-1 login-btn">
+        <a class="waves-effect waves-light hoverable btn red darken-1 modal-trigger" data-target="modal1">
             <i class="material-icons right">pets</i>Login!</a>
     </div>
 
@@ -64,7 +66,7 @@
 
     <!-- Custom Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 
 <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
