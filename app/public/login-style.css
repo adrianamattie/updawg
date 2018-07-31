@@ -1,0 +1,7 @@
+body {
+    background-image: url(../public/assests/dog.jpg); 
+    /* no-repeat center center fixed;    */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
