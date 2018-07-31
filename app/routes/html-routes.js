@@ -19,8 +19,8 @@ module.exports = function(app) {
   });
 
   // add code to send the add.html page, where users can enter new books to the db
-  app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/add.html"))
+  app.get("/adoptee", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/adoptee.html"))
   });
 
   // add code to send the all.html page, where all books in the db are displayed
@@ -37,5 +37,11 @@ module.exports = function(app) {
   app.get("/long", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/long.html"))
   });
+
+  //login page
+  app.get('/login',function(req,res){
+    res.sendFile(path.join(__dirname,"../public/login.html"));
+  })
+
 
 };

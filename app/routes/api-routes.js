@@ -82,6 +82,7 @@ module.exports = function (app) {
       lastName: req.body.lastName,
       bio:req.body.bio,
       conditions: req.body.conditions,
+      uid:req.body.uid,
       interested: false
     });
   });
