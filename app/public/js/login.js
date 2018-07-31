@@ -2,7 +2,9 @@
 $(document).ready(() => {
 
     $('.dropdown-trigger').dropdown();
-
+    $('.login-btn').on('click',function(){
+        $('.login-container').css('display','block');
+    })
 });
 
 // bubble properties
