@@ -9,7 +9,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 require("dotenv").config();
 
-var db = require("./app/models/adopter");
+var db = require("./app/models/adopter.js");
 
 // Sets up the Express App
 // =============================================================
