@@ -3,7 +3,7 @@
 var Sequelize = require("sequelize");
 // Require the sequelize library
 // Require the connection to the database (connection.js)
-var sequelize = require('../config/connection');
+var sequelize = require('/Users/dominicabogado/xmen/project2/updawg/app/config/config.json');
 
 // Create an "adopter" model with the following configuration
     var Adopter = sequelize.define("adopter", {
