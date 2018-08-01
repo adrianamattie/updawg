@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // add code to send the view.html file
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/view.html"))
+    res.sendFile(path.join(__dirname, "../public/login.html"))
   });
 
   // add code to send the add.html page, where users can enter new profiles to the db
