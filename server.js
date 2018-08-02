@@ -9,7 +9,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 require("dotenv").config();
 
-var db = require("./app/models/adopter.js");
+var db = require("./app/models");
 
 // Sets up the Express App
 // =============================================================
@@ -33,6 +33,8 @@ require("./app/routes/html-routes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
+db.sequelize.sync({force: true}).then(function(){
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+})
