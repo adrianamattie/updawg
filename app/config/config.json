@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "zombies23",
+    "password": "ab429630",
     "database": "slipIntoThe_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
