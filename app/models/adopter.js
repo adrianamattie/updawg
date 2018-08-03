@@ -24,7 +24,7 @@ var Adopter = sequelize.define("adopter", {
     lastName: {
         type: Sequelize.STRING,
     },
-    interested: {
+    picture: {
         type: Sequelize.STRING,
         allowNull: false,
         defaultValue: "https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=63de74668d8517b43662a6fcf3870f22&auto=format&fit=crop&w=774&q=80"
