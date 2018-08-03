@@ -19,11 +19,27 @@
   },
   "homepage": "https://github.com/adrianamattie/updawg#readme",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
+    "cls-bluebird": "^2.1.0",
     "dotenv": "^6.0.0",
+    "dottie": "^2.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "generic-pool": "^3.4.2",
+    "inflection": "^1.12.0",
+    "is-bluebird": "^1.0.2",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
     "mysql2": "^1.5.3",
-    "sequelize": "^4.38.0"
+    "retry-as-promised": "^3.0.0",
+    "sequelize": "^4.38.0",
+    "shimmer": "^1.2.0",
+    "terraformer": "^1.0.9",
+    "terraformer-wkt-parser": "^1.2.0",
+    "toposort-class": "^1.0.1",
+    "uuid": "^3.3.2",
+    "validator": "^10.4.0",
+    "wkx": "^0.4.5"
   }
 }

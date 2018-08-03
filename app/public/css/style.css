@@ -1,4 +1,6 @@
 
+
+
 #container {
     width: 500px;
     margin: auto !important;
@@ -6,12 +8,12 @@
     height: 500px;
     position: relative;
     list-style-type: none;
-    -webkit-touch-callout: none;
+    /* -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
   }
   .buddy {
     display: none;
@@ -77,4 +79,13 @@
     top: 50px;
     left: 40px;
     text-shadow: none;
+  }
+
+  .adoptPetBackground {
+    background-image: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccdbaaf7bb352c17aaf967cf09c1285c&auto=format&fit=crop&w=800&q=60")
+  }
+
+  #userProfileBackground {
+    background-image: url("https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6d90809d92f0fff3219b075d0a119ee4&auto=format&fit=crop&w=800&q=60")
+
   }
