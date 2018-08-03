@@ -45,7 +45,9 @@ module.exports = function (app) {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       bio:req.body.bio,
+      picture: req.body.picture,
       conditions: req.body.conditions,
+      profile: req.body.profile,
       uid:req.body.uid,
       interested: false
     });
