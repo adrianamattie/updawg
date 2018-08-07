@@ -28,4 +28,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/all.html"))
   });
 
+    // add code to send the all.html page, where all pets profiles are displayed
+    app.get("/pets", function(req, res) {
+      res.sendFile(path.join(__dirname, "../public/pets.html"))
+    });
+
 };

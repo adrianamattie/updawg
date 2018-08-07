@@ -12,6 +12,7 @@
 	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -29,10 +30,6 @@
 				<span class="fa fa-plus"></span> Create a new Profile</a>
 			<a href="/all" class="btn btn-danger btn-lg">
 				<span class="fa fa-th-list"></span> All Pets and Adopters</a>
-			<!-- <a href="/long" class="btn btn-danger btn-lg">
-				  <span class="fa fa-th-list"></span> Long Books</a>
-				<a href="/short" class="btn btn-danger btn-lg">
-				  <span class="fa fa-th-list"></span> Short Books</a> -->
 		</div>
 
 		<div class="row">
@@ -48,23 +45,23 @@
 						<form action="" method="POST" role="form">
 							<div class="form-group">
 								<label for="">First Name</label>
-								<input type="text" class="form-control" id="firstName" placeholder="">
+								<input type="text" class="form-control" id="firstName" placeholder="" required
 							</div>
 							<div class="form-group">
 								<label for="">Last Name</label>
-								<input type="text" class="form-control" id="lastName" placeholder="">
+								<input type="text" class="form-control" id="lastName" placeholder="" required>
 							</div>
 							<div class="form-group">
 								<label for="">Picture Link</label>
-								<input type="text" class="form-control" id="petPicture" placeholder="Tell us a bit about your home!">
+								<input type="text" class="form-control" id="petPicture" placeholder="Tell us a bit about your home!" required>
 							</div>
 							<div class="form-group">
 								<label for="">About Me</label>
-								<input type="text" class="form-control" id="bio" placeholder="Tell us a bit about yourself!">
+								<input type="text" class="form-control" id="bio" placeholder="Tell us a bit about yourself!" required>
 							</div>
 							<div class="form-group">
 								<label for="">Living Conditions</label>
-								<input type="text" class="form-control" id="livingCondition" placeholder="Tell us a bit about your home!">
+								<input type="text" class="form-control" id="livingCondition" placeholder="Tell us a bit about your home!" required>
 							</div>
 							<label for="">Profile Type</label>
 							<select id="profileType">

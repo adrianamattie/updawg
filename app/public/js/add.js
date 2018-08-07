@@ -29,8 +29,8 @@ $("#add-btn").on("click", function(event) {
   var newAdopter = {
     firstName: $("#firstName").val().trim(),
     lastName: $("#lastName").val().trim(),
-    bio: $("#bio").val().trim(),
     picture: $("#petPicture").val().trim(),
+    bio: $("#bio").val().trim(),
     conditions: $("#livingCondition").val().trim(),
     uid:uid,
     profile: $("select").val(),
@@ -47,6 +47,7 @@ $("#add-btn").on("click", function(event) {
   // Empty each input box by replacing the value with an empty string
   $("#firstName").val("");
   $("#lastName").val("");
+  $("#petPicture").val("");
   $("#bio").val("");
   $("#livingCondition").val("");
 

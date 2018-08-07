@@ -19,7 +19,7 @@ module.exports = function (app) {
   });
 
   // Add sequelize code to get a specific book and return it as JSON
-  app.get("/api/adoptee", function (req, res) {
+  app.get("/api/pets", function (req, res) {
     Adopter.findAll({
       where: {
         profile: "adoptee",
@@ -44,8 +44,8 @@ module.exports = function (app) {
     Adopter.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      bio:req.body.bio,
       picture: req.body.picture,
+      bio:req.body.bio,
       conditions: req.body.conditions,
       profile: req.body.profile,
       uid:req.body.uid,
