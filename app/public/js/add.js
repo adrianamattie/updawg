@@ -1,5 +1,6 @@
 // The code in add.js handles what happens when the user clicks the "Add a book" button.
 //handle authentication
+
 var config = {
   apiKey: "AIzaSyBdKKNfe0cwgREyNhcvn7rxBG2-SxvRGh4",
   authDomain: "updawg-e1145.firebaseapp.com",
@@ -15,9 +16,26 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
     uid = user.uid;
-  } else {
+    console.log(user.displayName);
+    if(user.displayName=="Member"){
+    $.get("/api/profiles/"+uid,function(data){
+      console.log(data);
+      if(data.length>0){
+        window.location.replace("http://localhost:8080/userProfile");
+      }
+    })
+    
+
+  }else {
+    user.updateProfile({
+      displayName: "Member"
+    })
+    console.log(user.displayName);
+    console.log('changing to block');
+    $("body").css("display","block"); 
     // User is signed out.
   }
+}
 });
 
 
@@ -33,16 +51,17 @@ $("#add-btn").on("click", function(event) {
     bio: $("#bio").val().trim(),
     conditions: $("#livingCondition").val().trim(),
     uid:uid,
+    interested:true,
     profile: $("select").val(),
   };
 
   // Send an AJAX POST-request with jQuery
-  $.post("/api/new", newAdopter)
-    // On success, run the following code
-    .then(function(data) {
-      // Log the data we found
-      console.log(data);
-    });
+  $.post("/api/userProfiles", newAdopter,function(data){
+    console.log(data);
+    window.location.replace("http://localhost:8080/userProfile");
+
+  })
+  
 
   // Empty each input box by replacing the value with an empty string
   $("#firstName").val("");

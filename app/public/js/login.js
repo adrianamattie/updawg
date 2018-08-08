@@ -2,7 +2,7 @@
 $(document).ready(() => {
 
     $('.dropdown-trigger').dropdown();
-    $('.modal').modal();
+
 });
 
 // bubble properties
@@ -165,5 +165,4 @@ var uiConfig = {
 ui.start('#firebaseui-auth-container', uiConfig);
 
 //get users uid on sign in
-
 
