@@ -1,28 +1,34 @@
-$(document).ready(function(){
+$.get("/api/pets", function (data) {
 
-    $(".buddy").on("swiperight",function(){
-      $(this).addClass('rotate-left').delay(700).fadeOut(1);
-      $('.buddy').find('.status').remove();
+  var num = 0
 
-      $(this).append('<div class="status like">Like!</div>');      
-      if ( $(this).is(':last-child') ) {
-        $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
-       } else {
-          $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
-       }
-    });  
+  function clickButton(){
+    $(".image").empty();
+    $(".petName").empty()
+    $(".aboutMe").empty();
+    $(".aboutHome").empty();
+    $(".image").append("<img src='"+data[num].picture+ "' " + "alt='"+data[num].firstName + " " + data[1].lastName + "'>" )
+    $(".petName").append(data[num].firstName + " " + data[num].lastName);
+    $(".aboutMe").append(data[num].bio);
+    $(".aboutHome").append(data[num].conditions);
+    num++
+  }
 
-   $(".buddy").on("swipeleft",function(){
-    $(this).addClass('rotate-right').delay(700).fadeOut(1);
-    $('.buddy').find('.status').remove();
-    $(this).append('<div class="status dislike">Dislike!</div>');
-
-    if ( $(this).is(':last-child') ) {
-     $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
-      alert('OUPS');
-     } else {
-        $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
-    } 
-  });
-
+  $("#testButton").on("click", function(event){
+    clickButton();
+  })
 });
+
+// var data = ["a", "b", "c", "d"];
+
+// var num = 0;
+// console.log(data[num]);
+// alert("hello")
+// $("#testButton").on("click", function(event){
+//   console.log("Hello")
+//   newArray();
+// })
+// function newArray(){
+//   $(".aboutMe").append(data[num]);
+// }
+
