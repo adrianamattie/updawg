@@ -3,15 +3,27 @@ $.get("/api/pets", function (data) {
   var num = 0
 
   function clickButton(){
-    $(".image").empty();
-    $(".petName").empty()
-    $(".aboutMe").empty();
-    $(".aboutHome").empty();
-    $(".image").append("<img src='"+data[num].picture+ "' " + "alt='"+data[num].firstName + " " + data[1].lastName + "'>" )
-    $(".petName").append(data[num].firstName + " " + data[num].lastName);
-    $(".aboutMe").append(data[num].bio);
-    $(".aboutHome").append(data[num].conditions);
-    num++
+    if (num < data.length){
+      $(".image").empty();
+      $(".petName").empty()
+      $(".aboutMe").empty();
+      $(".aboutHome").empty();
+      $(".image").append("<img src='"+data[num].picture + "' " + "alt='"+data[num].firstName + " " + data[num].lastName + "'>" )
+      $(".petName").append(data[num].firstName + " " + data[num].lastName);
+      $(".aboutMe").append(data[num].bio);
+      $(".aboutHome").append(data[num].conditions);
+      num++
+    } else{
+      num=0;
+      $(".image").empty();
+      $(".petName").empty()
+      $(".aboutMe").empty();
+      $(".aboutHome").empty();
+      $(".image").append("<img src='"+data[num].picture + "' " + "alt='"+data[num].firstName + " " + data[num].lastName + "'>" )
+      $(".petName").append(data[num].firstName + " " + data[num].lastName);
+      $(".aboutMe").append(data[num].bio);
+      $(".aboutHome").append(data[num].conditions);
+    };
   }
 
 
@@ -21,7 +33,7 @@ $.get("/api/pets", function (data) {
   })
 
   $("#dislikeButton").on("click", function(event){
-
+    clickButton();
   })
 });
 

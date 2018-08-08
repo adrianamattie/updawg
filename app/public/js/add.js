@@ -37,8 +37,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 }
 });
-
-
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
   event.preventDefault();

@@ -40,7 +40,7 @@ module.exports = function (app) {
   });
 
   // Add sequelize code to create adopter profile
-  app.post("/api/new", function (req, res) {
+  app.post("/api/userProfiles", function (req, res) {
     Adopter.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -51,11 +51,12 @@ module.exports = function (app) {
       uid:req.body.uid,
       interested: false
     });
+    res.sendStatus(200);
   });
 
   //ADD THIS PLEASE get profile data for different uids**************************************************************
   app.get('/api/profiles/:uid',function(req,res){
-    db.Adopter.findAll({
+    Adopter.findAll({
         where:{
             uid:req.params.uid
         }
@@ -68,7 +69,7 @@ module.exports = function (app) {
 });
 //get all users that like my page
 app.get('/api/interested',function(req,res){
-    db.Adopter.findAll({
+    Adopter.findAll({
         where:{
             interested:true
         }
@@ -79,20 +80,6 @@ app.get('/api/interested',function(req,res){
         console.log(data);
         
     })
-});
-
-app.put("/api/pets/:id?", function(req, res) {
-  // Update takes in an object describing the properties we want to update, and
-  // we use where to describe which objects we want to update
-  db.Adopter.update({
-    interested: req.body.interested
-  }, {
-    where: {
-      id: req.body.id
-    }
-  }).then(function(dbTodo) {
-    res.json(dbTodo);
-  });
 });
 
 //END HERE*****************************************************************************************************************************
