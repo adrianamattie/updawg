@@ -53,6 +53,36 @@ module.exports = function (app) {
     });
   });
 
+  //ADD THIS PLEASE get profile data for different uids**************************************************************
+  app.get('/api/profiles/:uid',function(req,res){
+    db.Adopter.findAll({
+        where:{
+            uid:req.params.uid
+        }
+    }).then(function(data){
+        
+        //send user data to html and js file [data]
+        res.json(data);
+        
+    })
+});
+//get all users that like my page
+app.get('/api/interested',function(req,res){
+    db.Adopter.findAll({
+        where:{
+            interested:true
+        }
+    }).then(function(data){
+        
+        //send user data to html and js file [data]
+        res.json(data);
+        console.log(data);
+        
+    })
+});
+
+//END HERE*****************************************************************************************************************************
+
   // Add sequelize code to delete a book
   app.post("/api/delete", function(req, res) {
     console.log("Book Data:");

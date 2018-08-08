@@ -31,6 +31,9 @@ module.exports = function(app) {
   app.get("/all", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/all.html"))
   });
+  app.get('/userProfile',function(req,res){
+    res.sendFile(path.join(__dirname,"../public/userProfile.html"));
+})
 
    // add code to send the all.html page, where all profiles in the db are displayed
    app.get("/tinder", function (req, res) {
