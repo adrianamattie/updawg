@@ -81,19 +81,21 @@ app.get('/api/interested',function(req,res){
     })
 });
 
-//END HERE*****************************************************************************************************************************
-
-  // Add sequelize code to delete a book
-  app.post("/api/delete", function(req, res) {
-    console.log("Book Data:");
-    console.log(req.body);
-    Book.destroy({
-      where: {
-        id: req.body.id
-      }
-    });
+app.put("/api/pets/:id?", function(req, res) {
+  // Update takes in an object describing the properties we want to update, and
+  // we use where to describe which objects we want to update
+  db.Adopter.update({
+    interested: req.body.interested
+  }, {
+    where: {
+      id: req.body.id
+    }
+  }).then(function(dbTodo) {
+    res.json(dbTodo);
   });
+});
 
+//END HERE*****************************************************************************************************************************
 
 
 };

@@ -9,6 +9,8 @@ body{
     background-position: 53% 0;
 
 }
+
+
 /* Background CSS */
 
 .preloader {
@@ -151,7 +153,19 @@ body{
     }
 }
 
+.likeSide{
+    color: #3AE295;
+    border: solid #3AE295;
+    font-size:48px;
+    text-align:center
+}
+.dislikeSide{
+    color:#F47462;
+    border:solid #F47462;
+    font-size:48px;
+    text-align:center
 
+}
 /*  */
 img{
     height:300px;
@@ -159,6 +173,10 @@ img{
 }
 .image{
     text-align: center
+}
+
+.swipeRight{
+    
 }
 
 .picture-containter{

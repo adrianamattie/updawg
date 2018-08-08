@@ -18,6 +18,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"))
   });
 
+  app.get("/adoptPet", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/adoptPet.html"))
+  });
+
   // add code to send the add.html page, where users can enter new profiles to the db
   app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/add.html"))
@@ -27,13 +31,10 @@ module.exports = function(app) {
   app.get("/all", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/all.html"))
   });
-  app.get('/userProfile',function(req,res){
-    res.sendFile(path.join(__dirname,"../public/userProfile.html"));
-})
 
     // add code to send the all.html page, where all pets profiles are displayed
     app.get("/pets", function(req, res) {
       res.sendFile(path.join(__dirname, "../public/pets.html"))
     });
 
-};
+  };
