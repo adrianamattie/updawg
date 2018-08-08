@@ -48,6 +48,7 @@ $("#add-btn").on("click", function(event) {
   $("#firstName").val("");
   $("#lastName").val("");
   $("#bio").val("");
+  $("#petPicture").val("");
   $("#livingCondition").val("");
 
 });

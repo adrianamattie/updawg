@@ -1,6 +1,6 @@
 
 $(document).ready(() => {
-
+    $('.modal').modal();
     $('.dropdown-trigger').dropdown();
 
 });

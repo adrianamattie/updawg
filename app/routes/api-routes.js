@@ -19,7 +19,7 @@ module.exports = function (app) {
   });
 
   // Add sequelize code to get a specific book and return it as JSON
-  app.get("/api/adoptee", function (req, res) {
+  app.get("/api/pets", function (req, res) {
     Adopter.findAll({
       where: {
         profile: "adoptee",
