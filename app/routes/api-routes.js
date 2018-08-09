@@ -81,7 +81,7 @@ app.get('/api/interested',function(req,res){
         
     })
 });
-
+// Update function
 app.post("/api/allpets", function(req, res){
   Adopter.update({
     interested: req.body.interested
