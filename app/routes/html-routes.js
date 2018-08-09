@@ -22,6 +22,10 @@ module.exports = function(app) {
      res.sendFile(path.join(__dirname, "../public/adoptPet.html"))
    });
 
+      app.get("/pet", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/pet.html"))
+      });
+
   // add code to send the add.html page, where users can enter new profiles to the db
   app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/add.html"))

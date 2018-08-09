@@ -40,7 +40,7 @@ module.exports = function (app) {
   });
 
   // Add sequelize code to create adopter profile
-  app.post("/api/new", function (req, res) {
+  app.post("/api/userProfiles", function (req, res) {
     Adopter.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,

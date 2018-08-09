@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Profile</title>
     <link rel="icon" type="image/png" href="assets/catupdawg.png" sizes="16x16 32x32" />
+    <link rel="stylesheet" href="./css/reset.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,13 +15,34 @@
 </head>
 
 <body id="adoptPetBackground">
-<div class="right" >
-    <img src="assets/updawg design 1.png" alt="updawg logo" class="logo" style="margin-right:80px;">
-</div>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-wrapper transparent" id="doggieNav" style="background-color:white;">
+            <a href="#" class="brand-logo center container">
+                <img src="assets/updawg design 1.png" alt="UpDawg" style="height:2em;">
+            </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li>
+                    <a class="hoverable btn red darken-1 dropdown-trigger" data-target='dropdown1'>
+                        <i class="material-icons right" style="margin-left:0">dehaze</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-light pulse hoverable btn red darken-1 modal-trigger" data-target="modal1">
+                        <i class="material-icons right">pets</i>Login!</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">JavaScript</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Card Code -->
     <div class="container">
         <div class="row">
-            <div class="col s12 m6">
-                <div class="card">
+            <div class="col s3"></div>
+            <div class="col s6">
+                <div class="card" style="margin-top: 3em;">
                     <div class="card-image waves-effect waves-block waves-light image">
                     </div>
                     <div class="card-content">
@@ -42,8 +64,10 @@
                     </div>
                 </div>
             </div>
+            <div class="col s3"></div>
         </div>
     </div>
+    <!-- End of Card Code -->
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
@@ -54,4 +78,3 @@
 </body>
 
 </html>
-
