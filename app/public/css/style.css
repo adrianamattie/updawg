@@ -12,7 +12,7 @@
   -ms-user-select: none;
   user-select: none; */
 }
-.buddy {
+/* .buddy {
   display: none;
   background: #fff;
   border-radius: 10px;
@@ -52,7 +52,7 @@
   background-size: auto 160% !important;
   background-position: center;
  background-repeat: no-repeat;
-}
+} */
 /* .like {
   border-radius: 5px;
   padding: 5px 10px;
@@ -81,6 +81,15 @@
 .likes-display {
  font-family: 'Permanent Marker',cursive;
  
+}
+.interestPic {
+  height:300px;
+  width:360px;
+}
+
+.caption {
+  font-size:24px;
+  font-weight: bold;
 }
 
 #adoptPetBackground {

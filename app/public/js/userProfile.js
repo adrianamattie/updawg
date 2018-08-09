@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         var card = $("<div class='card col s6 likes'></div>");
         $("<h3>" + data[i].firstName + " " + data[i].lastName + "</h3>").appendTo(card);
-        $("<img style='width:100%' src ='" + data[i].picture + "'>").appendTo(card);
+        $("<img class='interestPic' src ='" + data[i].picture + "'>").appendTo(card);
         card.appendTo(contain);
         contain.appendTo(".likes-display");
         card.attr("data", data[i].uid);
@@ -36,7 +36,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             var display = $(".liked-user-display");
             display.empty();
             $("<h3>" + dataS[0].firstName + " " + dataS[0].lastName + "</h3>").appendTo(display);
-            $("<img src ='" + dataS[0].picture + "'>").appendTo(display);
+            $("<img class='interestPic' src ='" + dataS[0].picture + "'>").appendTo(display);
             $("<p>" + dataS[0].bio + "</p>").appendTo(display);
             $("<p>" + dataS[0].conditions + "</p>").appendTo(display);
           });
