@@ -26,7 +26,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         var card = $("<div class='card col s6 likes'></div>");
         $("<h3>" + data[i].firstName + " " + data[i].lastName + "</h3>").appendTo(card);
-        $("<img src ='" + data[i].picture + "'>").appendTo(card);
+        $("<img style='width:100%' src ='" + data[i].picture + "'>").appendTo(card);
         card.appendTo(contain);
         contain.appendTo(".likes-display");
         card.attr("data", data[i].uid);
@@ -57,7 +57,7 @@ function displayUserData(uid) {
   $.get('/api/profiles/' + uid, function (data) {
     //insert into display things
     //data returns an array
-    $(".userPic").attr("src", data[0].picture);
+    $(".userPic").attr("src", data[0].picture).css("width","100%");
     $(".adopterName").html(data[0].firstName + " " + data[0].lastName)
     $(".bio").html(data[0].bio);
     $(".conditions").html(data[0].conditions);

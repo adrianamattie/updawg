@@ -9,21 +9,40 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="userProfileBackground">
-    <a class="waves-effect waves-light pulse hoverable btn red darken-1 modal-trigger pet" style="margin-left:10px; margin-top:10px;">
-        <i class="material-icons right">pets</i>Adopt a Pet</a>
+    <nav class="transparent">
+        <div class="nav-wrapper transparent" id="doggieNav">
+            <a href="#" class="brand-logo center container">
+                <img src="assets/updawg design 1.png" alt="UpDawg" style="height:2em;">
+            </a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li>
+                    <a class="hoverable btn red darken-1 dropdown-trigger" data-target='dropdown1'>
+                        <i class="material-icons right" style="margin-left:0">dehaze</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect waves-light pulse hoverable btn red darken-1 modal-trigger">
+                        <i class="material-icons right">pets</i>Adopt a Pet</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     </div>
-    <div class="right" style="margin-left:100px;">
+    <!-- <div class="right" style="margin-left:100px;">
         <img src="assets/updawg design 1.png" alt="updawg logo" class="logo" style="margin-right:80px;">
-    </div>
+    </div> -->
     <div class="container">
         <div class="row">
-            <div class="col s12 m7">
-                <div class="card hoverable">
+            <div class="col s3"></div>
+            <div class="col s6" id="polaroidFrame" style="">
+                <!-- <div class=""> -->
+                <div class="card hoverable" style="margin-top:3em;">
                     <div class="card-image">
-<img class="userPic" alt="user Image">
+                        <img class="userPic" alt="user Image">
                         <span class="adopterName card-title"></span>
                     </div>
                     <div class="card-content">
@@ -31,28 +50,29 @@
                         <p class="bio"></p>
                         <h5>Conditions</h5>
                         <p class="conditions"></p>
-                    
                     </div>
                 </div>
+                <!-- </div> -->
             </div>
+            <div class="col s3"></div>
         </div>
     </div>
-    <div class="likes-display">
-        <h3>Below are the people who are interested! </h3>
+    <div class="likes-display container center">
+        <h3>Below are people you've liked!</h3>
     </div>
     <!--Modal-->
     <div id="likedUser" class="modal">
-            <div class="modal-content liked-user-display">
-            </div>
-      
+        <div class="modal-content liked-user-display">
+        </div>
     </div>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
     <script src="js/userProfile.js" type="text/javascript"></script>
 </body>
 </html>
+
+
+
+Collapse 
