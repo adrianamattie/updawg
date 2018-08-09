@@ -1,32 +1,4 @@
-// // for offline data 
-// var data = [
-//   {
-//     firstName:"Sang",
-//     lastName:"Lee",
-//     picture:"../public/assets/dog.jpg",
-//     bio:"adasda",
-//     conditions:"asdada",
-//     uid:1
-// },
-// {
-//   firstName:"Sang",
-//   lastName:"Lee",
-//   picture:"../pubic/assets/dog.jpg",
-//   bio:"adasda",
-//   conditions:"asdada",
-//   uid:2
-// },
-// {
-//   firstName:"new",
-//   lastName:"Lee",
-//   picture:"../pubic/assets/dog.jpg",
-//   bio:"adasda",
-//   conditions:"asdada",
-//   uid:3
-// }
 
-// ]
-//keep track of cards that need to be displayed
 var track = 1;
 var max;
 
@@ -36,7 +8,7 @@ $.get("/api/pets", function (data) {
     for (var num = 0; num <= data.length; num++) {
 
         if (num < data.length) {
-            var card = `<div class="container new-card" data="${data[num].uid}" style='position:absolute;left:20px;z-index:${999-num}'>
+            var card = `<div class="container new-card" data="${data[num].uid}" style='position:absolute;left:270px;z-index:${999-num}'>
       <div class="row">
           <div class="col s3"></div>
           <div class="col s6">
