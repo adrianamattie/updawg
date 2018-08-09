@@ -63,4 +63,10 @@ function displayUserData(uid) {
     $(".conditions").html(data[0].conditions);
 
   })
-}
+};
+
+$(".pet").on("click",function(){
+
+  window.location.replace("http://localhost:8080/pets");
+
+})

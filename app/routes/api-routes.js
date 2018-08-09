@@ -82,6 +82,18 @@ app.get('/api/interested',function(req,res){
     })
 });
 
+app.post("/api/allpets", function(req, res){
+  Adopter.update({
+    interested: req.body.interested
+  },{
+    where:{
+      uid: req.body.uid
+    }
+  }).then(function(updated){
+    res.json(updated);
+  })
+})
+
 //END HERE*****************************************************************************************************************************
 
 

@@ -1,6 +1,22 @@
+$(document).ready(function(){
+
 $.get("/api/pets", function (data) {
 
   var num = 0
+  console.log(num);
+
+  $(".image").empty();
+  $(".petName").empty()
+  $(".aboutMe").empty();
+  $(".aboutHome").empty();
+  $(".like").empty();
+  $(".dislike").empty();
+  $(".image").append("<img src='"+data[num].picture + "' " + "alt='"+data[num].firstName + " " + data[num].lastName + "'>" )
+  $(".petName").append(data[num].firstName + " " + data[num].lastName);
+  $(".aboutMe").append(data[num].bio);
+  $(".aboutHome").append(data[num].conditions);
+  $("<button class='likeButton'>Like</button>").appendTo(".like");
+  $("<button class='dislikeButton'>DisLike</button>").appendTo(".dislike");
 
   function clickButton(){
     if (num < data.length){
@@ -8,35 +24,30 @@ $.get("/api/pets", function (data) {
       $(".petName").empty()
       $(".aboutMe").empty();
       $(".aboutHome").empty();
+      $(".like").empty();
+      $(".dislike").empty();
       $(".image").append("<img src='"+data[num].picture + "' " + "alt='"+data[num].firstName + " " + data[num].lastName + "'>" )
       $(".petName").append(data[num].firstName + " " + data[num].lastName);
       $(".aboutMe").append(data[num].bio);
       $(".aboutHome").append(data[num].conditions);
+      $("<button class='likeButton' data='"+data[num].uid+"'>Like</button>").appendTo(".like");
+      $("<button class='dislikeButton data='"+data[num].uid+"''>DisLike</button>").appendTo(".dislike");
       num++
-    } else{
-      num=0;
-      $(".image").empty();
-      $(".petName").empty()
-      $(".aboutMe").empty();
-      $(".aboutHome").empty();
-      $(".image").append("<img src='"+data[num].picture + "' " + "alt='"+data[num].firstName + " " + data[num].lastName + "'>" )
-      $(".petName").append(data[num].firstName + " " + data[num].lastName);
-      $(".aboutMe").append(data[num].bio);
-      $(".aboutHome").append(data[num].conditions);
+
     };
   }
 
 
-
-  $("#likeButton").on("click", function(event){
+  $(".like").on("click",".likeButton", function(event){
     clickButton();
+    console.log("working")
   })
 
-  $("#dislikeButton").on("click", function(event){
+  $(".dislike").on("click", ".dislikeButton",function(event){
     clickButton();
   })
 });
-
+});
 // var data = ["a", "b", "c", "d"];
 
 // var num = 0;
@@ -49,3 +60,15 @@ $.get("/api/pets", function (data) {
 // function newArray(){
 //   $(".aboutMe").append(data[num]);
 // }
+
+$(".like").on("click",".likeButton",function(){
+  
+  console.log({uid:$(this).attr("data"),interested:true})
+  $.post("/api/allpets",{uid:$(this).attr("data"),interested:true},function(){
+
+
+
+  })
+
+
+})
