@@ -1,23 +1,29 @@
-# Eslint Example
+# UpDawg
 
-In this example we will use eslint to fix issues with the calculator app from the previous activity.
+UpDawg is a pet Adoption Application that pairs Adopters with pets waiting to be adopted! Utilizing a Swipe function to "Like" or "Dislike" a profile, the intention of the App is pair pets with potential adopters.
 
-## Instructions
+## Development and Team Role
 
-* Install the [VS Code Eslint Extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
+Adriana - Team Leader and Front End Developer
+- 
 
-* Open the [Unsolved](Unsolved) folder and run `npm install` from your terminal to install dependencies.
+Ananya - Front End and Back End Developer
+-
 
-* Now open [Unsolved/example.js](Unsolved/example.js) in your code editor. If you were able to complete the previous steps correctly, you should see red annotations under different parts of the code. Hovering over each displays a popover with an eslint rule being broken.
+Dominic - Back End Developer
+-
+My primary role in the group was to set up the server and inform the user flow throughout the app. From the time the users log into the page to when the user has "liked" or "disliked" the profiles, it's important for there to be a logical progression for where our App is taking them. Setting up the HTML and API Routes were important for this. 
 
-  ![Eslint](Images/01-Eslint.png)
+In addition, I set up the connection from our database and the front end of our app. I ensured the data that the user inputted when logging into the app was easily accessible and stored for later use throughout the app.
 
-* Work to fix each part of the annotated code. 
+Sang - Back End Developer
+-
 
-### Bonus
+## How it works
+- (Adriana and Ananya Please Complete)
 
-* Try changing the quote style to enforce single-quotes instead of double-quotes.
+## Swipe Left Swipe Right
+- (Sang Please complete) 
 
-### Hints
 
-* If you're unsure about what an eslint rule is asking for, type it into Google for examples.
+
